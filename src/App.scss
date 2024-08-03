@@ -3,3 +3,42 @@ $yellow: #EBFF00;
 $blue: #304571;
 $black: #000000;
 $white: #FFFFFF;
+
+.header {
+    background-color: $black;
+    color: $white;
+    height: 32px;
+    display: grid;
+    grid-column: 1fr 1fr;
+    grid-gap: 28px;
+    grid-column: auto 1 auto auto auto;
+    grid-template-columns: auto 1fr auto auto auto;
+    .header-home {
+        grid-column-start: 3;
+        grid-column-end: 4;
+    }
+    .header-products {
+        grid-column-start: 4;
+        grid-column-end: 5;
+    }
+    grid-template-rows: 1fr;
+    .header-basket-icon {
+        width: 24px;
+        height: 24px;
+        grid-column-start: 5;
+        grid-column-end: 6;
+    }
+    a, img {
+        display: inherit;
+    }
+    a {
+        text-decoration: none;
+        color: white;
+    }
+}
+
+#logo {
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
