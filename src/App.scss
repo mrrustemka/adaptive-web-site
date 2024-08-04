@@ -58,7 +58,7 @@ $white: #FFFFFF;
         h1 {
             margin: 0;
             font-size: 72px;
-            font-weight: 800;
+            font-weight: 800 !important;
             line-height: 72px;
             span {
                 color: $pink;
@@ -268,6 +268,7 @@ $white: #FFFFFF;
             }
         }
         .card-1 {
+            background-image: url('./images/COSMO_2_MOBILE.svg');
             padding: 107px 100px 27px 26px;
             grid-column-start: 1;
             grid-column-end: 2;
@@ -278,6 +279,7 @@ $white: #FFFFFF;
             }
         }
         .card-2 {
+            background-image: url('./images/COSMO_3_MOBILE.svg');
             padding: 107px 32px 27px 25px;
             grid-column-start: 2;
             grid-column-end: 3;
@@ -286,6 +288,7 @@ $white: #FFFFFF;
 
         }
         .card-3 {
+            background-image: url('./images/COSMO_4_MOBILE.svg');
             padding: 106px 30px 28px 26px;
             grid-column-start: 1;
             grid-column-end: 2;
@@ -299,6 +302,7 @@ $white: #FFFFFF;
             }
         }
         .card-4 {
+            background-image: url('./images/COSMO_5_MOBILE.svg');
             padding: 106px 32px 28px 25px;
             grid-column-start: 2;
             grid-column-end: 3;
