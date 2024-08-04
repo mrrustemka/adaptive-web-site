@@ -40,6 +40,9 @@ $white: #FFFFFF;
         width: 24px;
         height: 24px;
       }
+      .header__basket-icon:hover {
+
+      }
     }
     a,
     img {
@@ -48,6 +51,12 @@ $white: #FFFFFF;
     a {
       text-decoration: none;
       color: white;
+    }
+    a:hover {
+        background: linear-gradient(98.25deg, #EBFF00 18.56%, #FF70D9 76.02%);
+        -webkit-text-fill-color: transparent; 
+        -webkit-background-clip: text; 
+        transition: fill 0.3s ease;
     }
   }
   .banner__header {
@@ -84,6 +93,10 @@ $white: #FFFFFF;
       font-weight: 700;
       line-height: 26.4px;
       border: none;
+    }
+    button:hover {
+        opacity: 60%;
+        transition: fill 0.3s ease;
     }
   }
 }
@@ -135,6 +148,10 @@ $white: #FFFFFF;
       font-size: 22px;
       font-weight: 700;
       line-height: 26.4px;
+    }
+    button:hover {
+        opacity: 60%;
+        transition: fill 0.3s ease;
     }
   }
   .card__item--1 {
@@ -217,6 +234,10 @@ $white: #FFFFFF;
       background: transparent;
       border: none;
       padding: 0;
+    }
+    .content__description-button:hover {
+        opacity: 60%;
+        transition: fill 0.3s ease;
     }
   }
 }
