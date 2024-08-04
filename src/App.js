@@ -4,6 +4,7 @@ import logo from './images/LOGO.svg';
 import mobileMenu from './images/MENU.svg';
 import React, { useState, useEffect } from 'react';
 import Card from './components/Card';
+import footerIcon from './images/FOOTER_ICON.svg'
 
 function App() {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 360);
@@ -55,7 +56,9 @@ function App() {
           <button className="content__description-button">Read more</button>
         </div>
       </div>
-      <footer className="footer"></footer>
+      <footer className="footer">
+        <img src={footerIcon} alt='Rocket'/>
+        </footer>
     </div>
   );
 }

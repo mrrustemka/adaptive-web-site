@@ -220,6 +220,12 @@ $white: #FFFFFF;
   }
 }
 
+.footer {
+    text-align: center;
+    padding-bottom: 19px;
+    background-color: $black;
+}
+
 @media (width <= 768px) {
   .header__logo {
     width: 72px;
