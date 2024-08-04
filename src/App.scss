@@ -64,7 +64,7 @@ $white: #FFFFFF;
                 color: $pink;
             }
         }
-        h2 {
+        h3 {
             font-size: 32px;
             font-weight: 800;
             line-height: 38.4px;
@@ -82,6 +82,137 @@ $white: #FFFFFF;
             font-size: 22px;
             font-weight: 700;
             line-height: 26.4px;
+        }
+    }
+}
+
+.content {
+    background-color: $blue;
+    padding: 58px 80px;
+    display: grid;
+    grid-gap: 40px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto auto auto;
+    
+    h3 {
+        margin: 0;
+        display: block;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        font-size: 32px;
+        line-height: 38.4px;
+        text-align: left;
+        color: $white;
+    }
+    .card-1, .card-2, .card-3, .card-4 {
+        font-weight: 800;
+        height: auto;
+        color: $white;
+        border-radius: 10px;
+        h2 {
+            font-size: 74px;
+            line-height: 74px;
+            margin: 0;
+        }
+        h4 {
+            font-size: 26px;
+            line-height: 31.2px;
+            margin: 22px 0;
+        }
+        button {
+            width: 191px;
+            height: 54px;
+            padding: 14px auto;
+            gap: 10px;
+            border-radius: 100px;
+            border: 2px solid $yellow;
+            background-color: transparent;
+            color: $yellow;
+            font-size: 22px;
+            font-weight: 700;
+            line-height: 26.4px;
+        }
+    }
+    .card-1 {
+        background-image: url('./images/COSMO_2.svg');
+        padding: 36px 0 36px 36px;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        h2 {
+            width: 635px;
+        }
+    }
+    .card-2 {
+        background-image: url('./images/COSMO_3.svg');
+        padding: 49px 0 36px 36px;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        h2 {
+            font-size: 46px;
+            line-height: 46px;
+        }
+        h4 {
+            font-size: 24px;
+            line-height: 28.8px;
+        }
+    }
+    .card-3 {
+        background-image: url('./images/COSMO_4.svg');
+        padding: 49px 0 36px 36px;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        h2 {
+            font-size: 46px;
+            line-height: 46px;
+        }
+        h4 {
+            font-size: 24px;
+            line-height: 28.8px;
+        }
+    }
+    .card-4 {
+        background-image: url('./images/COSMO_5.svg');
+        padding: 36px 0 36px 36px;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 4;
+        grid-row-end: 5;
+        h2 {
+            width: 692px;
+        }
+    }
+    .content-description {
+        grid-row-start: 5;
+        grid-row-end: 6;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        h5 {
+            font-size: 32px;
+            line-height: 38.4px;
+            color: $white;
+            margin: 0;
+        }
+        p {
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 24px;
+            opacity: 60%;
+            color: $white;
+            margin: 17px 0;
+        }
+        button {
+            font-size: 20px;
+            line-height: 24px;
+            color: $yellow;
+            background: transparent;
+            border: none;
+            padding: 0;
         }
     }
 }
@@ -104,9 +235,96 @@ $white: #FFFFFF;
                 font-size: 48px;
                 line-height: 48px;
             }
-            h2 {
+            h3 {
                 font-size: 22px;
                 line-height: 26.4px;
+            }
+        }
+    }
+    .content {
+        padding: 55px 30px;
+        grid-gap: 30px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto auto;
+        
+        h3 {
+            font-size: 24px;
+            line-height: 28.8px;
+        }
+        .card-1, .card-2, .card-3, .card-4 {
+           background-size: cover;
+            h2 {
+                font-size: 40px;
+                line-height: 40px;
+            }
+            h4 {
+                font-size: 16px;
+                line-height: 19.2px;
+            }
+            button {
+                width: 161px;
+                height: 33px;
+                padding: 7px auto;
+            }
+        }
+        .card-1 {
+            padding: 107px 100px 27px 26px;
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 2;
+            grid-row-end: 3;
+            h2 {
+                width: 212px;
+            }
+        }
+        .card-2 {
+            padding: 107px 32px 27px 25px;
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 2;
+            grid-row-end: 3;
+
+        }
+        .card-3 {
+            padding: 106px 30px 28px 26px;
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 3;
+            grid-row-end: 4;
+            h2 {
+                width: 260px;
+            }
+            h4 {
+                width: 280px;
+            }
+        }
+        .card-4 {
+            padding: 106px 32px 28px 25px;
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 3;
+            grid-row-end: 4;
+            h2 {
+                width: 280px;
+            }
+        }
+        .content-description {
+            grid-row-start: 4;
+            grid-row-end: 5;
+            grid-column-start: 1;
+            grid-column-end: 3;
+            h5 {
+                font-size: 24px;
+                line-height: 28.8px;
+            }
+            p {
+                font-size: 16px;
+                line-height: 19.2px;
+                margin: 13px 0 20px;
+            }
+            button {
+                font-size: 16px;
+                line-height: 19.2px;
             }
         }
     }
@@ -117,7 +335,6 @@ $white: #FFFFFF;
         background-image: url('./images/EARTH_MOBILE.svg'), url('./images/COSMO_1.svg');
         background-position: center top, left top;
         .header {
-            // grid-gap: 30px;
             height: 38px;
             grid-template-columns: auto 1fr auto;
             padding: 5px 20px 5px 20px;
@@ -147,7 +364,7 @@ $white: #FFFFFF;
                 font-size: 36px;
                 line-height: 36px;
             }
-            h2 {
+            h3 {
                 font-size: 16px;
                 line-height: 19.2px;
             }
@@ -161,4 +378,76 @@ $white: #FFFFFF;
             }
         }
     }
+
+    .content {
+       padding: 50px 20px;
+       grid-template-columns: 1fr;
+       grid-template-rows: auto auto auto auto auto auto;
+       
+       h3 {
+        font-size: 18px;
+        line-height: 21.6px;
+       }
+       .card-1 {
+           padding: 102px 92px 32px 27px;
+           grid-row-start: 2;
+           grid-row-end: 3;
+           h2 {
+               width: 200px;
+           }
+       }
+       .card-2 {
+           padding: 98px 28px 36px 25px;
+           grid-row-start: 3;
+           grid-row-end: 4;
+           grid-column-start: 1;
+           grid-column-end: 2;
+           h2 {
+            width: 265px;
+            }
+       }
+       .card-3 {
+           padding: 76px 26px 40px 28px;
+           grid-row-start: 4;
+           grid-row-end: 5;
+           h2 {
+               width: 260px;
+           }
+           h4 {
+               width: 265px;
+           }
+       }
+       .card-4 {
+           padding: 90px 28px 43px 25px;
+           grid-row-start: 5;
+           grid-row-end: 6;
+           grid-column-start: 1;
+           grid-column-end: 2;
+           h2 {
+               width: 265px;
+           }
+           h4 {
+            width: 265px;
+           }
+       }
+       .content-description {
+        grid-row-start: 6;
+        grid-row-end: 7;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        h5 {
+            font-size: 18px;
+            line-height: 21.6px;
+        }
+        p {
+            font-size: 14px;
+            line-height: 16.8px;
+            margin: 20px 0;
+        }
+        button {
+            font-size: 14px;
+            line-height: 16.8px;
+        }
+    }
+   }
 }
