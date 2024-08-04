@@ -4,41 +4,161 @@ $blue: #304571;
 $black: #000000;
 $white: #FFFFFF;
 
-.header {
-    background-color: $black;
-    color: $white;
-    height: 32px;
-    display: grid;
-    grid-column: 1fr 1fr;
-    grid-gap: 28px;
-    grid-column: auto 1 auto auto auto;
-    grid-template-columns: auto 1fr auto auto auto;
-    .header-home {
-        grid-column-start: 3;
-        grid-column-end: 4;
-    }
-    .header-products {
-        grid-column-start: 4;
-        grid-column-end: 5;
-    }
-    grid-template-rows: 1fr;
-    .header-basket-icon {
-        width: 24px;
-        height: 24px;
-        grid-column-start: 5;
-        grid-column-end: 6;
-    }
-    a, img {
-        display: inherit;
-    }
-    a {
-        text-decoration: none;
-        color: white;
-    }
-}
-
 #logo {
     grid-column-start: 1;
     grid-column-end: 2;
 }
 
+#banner {
+    background-image: url('./images/EARTH.svg'), url('./images/COSMO_1.svg');
+    background-position: right, left top;
+    background-repeat: no-repeat, no-repeat;
+    height: auto;
+    background-size: auto, cover;
+    .header {
+        background-color: $black;
+        color: $white;
+        height: 32px;
+        display: grid;
+        grid-gap: 28px;
+        grid-column: auto 1 auto auto auto;
+        grid-template-columns: auto 1fr auto auto auto;
+        grid-template-rows: 1fr;
+        padding: 24px 90px 24px 82px;
+        .header-home {
+            grid-column-start: 3;
+            grid-column-end: 4;
+        }
+        .header-products {
+            grid-column-start: 4;
+            grid-column-end: 5;
+        }
+        .header-basket {
+            grid-column-start: 5;
+            grid-column-end: 6;
+            .header-basket-icon {
+                width: 24px;
+                height: 24px;
+            }
+        }
+        a, img {
+            display: inherit;
+        }
+        a {
+            text-decoration: none;
+            color: white;
+        }
+    }
+    .banner-header {
+        width: 693px;
+        color: $white;
+        text-align: left;
+        font-family: "Lato";
+        padding: 91px 0px 119px 82px;
+        h1 {
+            margin: 0;
+            font-size: 72px;
+            font-weight: 800;
+            line-height: 72px;
+            span {
+                color: $pink;
+            }
+        }
+        h2 {
+            font-size: 32px;
+            font-weight: 800;
+            line-height: 38.4px;
+            span {
+                color: $yellow;
+            }
+        }
+        button {
+            width: 191px;
+            height: 54px;
+            padding: 14px auto;
+            gap: 10px;
+            border-radius: 100px;
+            background-color: $yellow;
+            font-size: 22px;
+            font-weight: 700;
+            line-height: 26.4px;
+        }
+    }
+}
+
+@media (width <= 768px) {
+    #logo {
+        width: 72px;
+    }
+    #banner {
+        background-image: url('./images/EARTH_TABLET.svg'), url('./images/COSMO_1.svg');
+        background-position: right bottom, left top;
+        .header {
+            grid-gap: 30px;
+            padding: 28px 50px 28px 30px;
+        }
+        .banner-header {
+            width: 411px;
+            padding: 100px 0px 100px 30px;
+            h1 {
+                font-size: 48px;
+                line-height: 48px;
+            }
+            h2 {
+                font-size: 22px;
+                line-height: 26.4px;
+            }
+        }
+    }
+}
+
+@media (width <= 360px) {
+    #banner {
+        background-image: url('./images/EARTH_MOBILE.svg'), url('./images/COSMO_1.svg');
+        background-position: center top, left top;
+        .header {
+            // grid-gap: 30px;
+            height: 38px;
+            grid-template-columns: auto 1fr auto;
+            padding: 5px 20px 5px 20px;
+            #logo {
+                margin-top: 7px;
+            }
+            .header-home {
+                display: none; // temporary
+            }
+            .header-products {
+                display: none; // temporary
+            }
+            .header-basket {
+                grid-column-start: 3;
+                grid-column-end: 4;
+                .header-basket-icon {
+                    width: 30px;
+                    height: 38px;
+                }
+            }
+        }
+        .banner-header {
+            width: 292px;
+            padding: 250px 0px 42px 34px;
+            text-align: center;
+            h1 {
+                font-size: 36px;
+                line-height: 36px;
+            }
+            h2 {
+                font-size: 16px;
+                line-height: 19.2px;
+            }
+            button {
+                width: 161px;
+                height: 33px;
+                margin: auto;
+                padding: 7px auto;
+                font-size: 16px;
+                line-height: 19.2px;
+            }
+        }
+    }
+}
