@@ -28,10 +28,10 @@ function App() {
   };
 
   const cardData = [
-    { header: 'Move the borders of reality!', textDesktop: "Go on a space adventure - it's possible with us!", textMobile: "Go on a space adventure", className: 'card__item card__item--1' },
-    { header: 'Space is not just stars and planets', textDesktop: 'it is a majestic journey to', textMobile: "it is a majestic journey to", className: 'card__item card__item--2' },
-    { header: 'For those who dream of stars', textDesktop: 'Our offer: make your dream come true', textMobile: "Our offer: make your dream come true", className: 'card__item card__item--3' },
-    { header: 'Fulfill your fantastic dreams', textDesktop: 'Space has never been so close', textMobile: "Space has never been so close", className: 'card__item card__item--4' },
+    { header: 'Move the borders of reality!', text: "Go on a space adventure", className: 'card__item card__item--1' },
+    { header: 'Space is not just stars and planets', text: 'it is a majestic journey to', className: 'card__item card__item--2' },
+    { header: 'For those who dream of stars', text: 'Our offer: make your dream come true', className: 'card__item card__item--3' },
+    { header: 'Fulfill your fantastic dreams', text: 'Space has never been so close', className: 'card__item card__item--4' },
   ];
 
   return (
@@ -62,7 +62,7 @@ function App() {
       <div className="content">
       <h3 className="content__title">Offers</h3>
       {cardData.map((card, index) => (
-        <Card key={index} header={card.header} text={isMobile ? card.textMobile : card.textDesktop} className={card.className} />
+        <Card key={index} header={card.header} text={card.text} className={card.className} />
       ))}
       <div className="content__description">
         <h5 className="content__description-title">Embark on a space journey</h5>

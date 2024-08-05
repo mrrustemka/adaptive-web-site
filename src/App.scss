@@ -171,6 +171,11 @@ $white: #FFFFFF;
     h2 {
       width: 635px;
     }
+    h4::after {
+      content: "- it's possible with us!";
+      display: inline-block;
+      margin-left: 4px;
+    }
   }
   .card__item--2 {
     background-image: url('./images/COSMO_3.svg');
@@ -329,6 +334,9 @@ $white: #FFFFFF;
       grid-row-end: 3;
       h2 {
         width: 212px;
+      }
+      h4::after {
+        content: "";
       }
     }
     .card__item--2 {
