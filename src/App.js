@@ -1,7 +1,5 @@
 import './App.scss';
-import logo from './images/LOGO.svg';
 import React, { useState } from 'react';
-import Card from './components/Card';
 import footerIcon from './images/FOOTER_ICON.svg'
 
 function App() {
@@ -61,7 +59,6 @@ function App() {
               <button>Learn more</button>
             </div>
           </div>
-        // <Card key={index} header={card.header} text={card.text} className={card.className} />
       ))}
       <div className="content__description">
         <h5 className="content__description-title">Embark on a space journey</h5>
