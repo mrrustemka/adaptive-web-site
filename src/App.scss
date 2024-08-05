@@ -4,6 +4,10 @@ $blue: #304571;
 $black: #000000;
 $white: #FFFFFF;
 
+.app {
+  background-color: $blue;
+}
+
 .header__logo {
   grid-column-start: 1;
   grid-column-end: 2;
@@ -105,7 +109,7 @@ $white: #FFFFFF;
 }
 
 .content {
-  background-color: $blue;
+  background-color: transparent;
   padding: 58px 80px;
   display: grid;
   grid-gap: 40px;
@@ -224,11 +228,12 @@ $white: #FFFFFF;
     }
     .content__description-text {
       font-size: 20px;
-      font-weight: 700;
+      font-weight: 500;
       line-height: 24px;
       opacity: 60%;
       color: $white;
       margin: 17px 0;
+      word-spacing: -2px;
     }
     .content__description-button {
       font-size: 20px;
@@ -250,10 +255,11 @@ $white: #FFFFFF;
     .content__description-additional.visible {
       display: block;
       font-size: 20px;
-      font-weight: 700;
+      font-weight: 500;
       line-height: 24px;
       opacity: 60%;
       color: $white;
+      word-spacing: -2px;
     }
   }
 }
