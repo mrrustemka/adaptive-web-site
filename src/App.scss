@@ -211,7 +211,7 @@ $white: #FFFFFF;
       width: 692px;
     }
   }
-  .content__description {
+  .content__description { 
     grid-row-start: 5;
     grid-row-end: 6;
     grid-column-start: 1;
@@ -241,6 +241,19 @@ $white: #FFFFFF;
     .content__description-button:hover {
         opacity: 60%;
         transition: fill 0.3s ease;
+    }
+    .content__description-additional {
+      display: none;
+      transition: opacity 0.5s ease-in-out;
+    }
+    
+    .content__description-additional.visible {
+      display: block;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 24px;
+      opacity: 60%;
+      color: $white;
     }
   }
 }

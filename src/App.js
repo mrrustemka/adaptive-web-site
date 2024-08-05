@@ -8,6 +8,8 @@ import footerIcon from './images/FOOTER_ICON.svg'
 
 function App() {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 360);
+  const [isTextVisible, setTextVisible] = useState(false);
+
 
   useEffect(() => {
     const handleResize = () => {
@@ -20,6 +22,10 @@ function App() {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
+
+  const handleButtonClick = () => {
+    setTextVisible(!isTextVisible);
+  };
 
   const cardData = [
     { header: 'Move the borders of reality!', textDesktop: "Go on a space adventure - it's possible with us!", textMobile: "Go on a space adventure", className: 'card__item card__item--1' },
@@ -54,16 +60,19 @@ function App() {
         </div>
       </header>
       <div className="content">
-        <h3 className="content__title">Offers</h3>
-        {cardData.map((card, index) => (
-          <Card key={index} header={card.header} text={isMobile ? card.textMobile : card.textDesktop} className={card.className} />
-        ))}
-        <div className="content__description">
-          <h5 className="content__description-title">Embark on a space journey</h5>
-          <p className="content__description-text">Traveling into space is one of the most exciting and unforgettable adventures that can change your life forever. And if you have ever dreamed of exploring stars, planets and galaxies, then our company is ready to help you realize this dream. We offer a unique experience that will allow you to go on a space journey and see all the secrets of the universe. We guarantee that every moment in space will be filled with incredible impressions, excitement and new discoveries. Our team of professionals takes care of your safety and comfort so that you can fully enjoy your adventure in space. We offer various options for space excursions.</p>
-          <button className="content__description-button">Read more</button>
-        </div>
+      <h3 className="content__title">Offers</h3>
+      {cardData.map((card, index) => (
+        <Card key={index} header={card.header} text={isMobile ? card.textMobile : card.textDesktop} className={card.className} />
+      ))}
+      <div className="content__description">
+        <h5 className="content__description-title">Embark on a space journey</h5>
+        <p className="content__description-text">Traveling into space is one of the most exciting and unforgettable adventures that can change your life forever. And if you have ever dreamed of exploring stars, planets and galaxies, then our company is ready to help you realize this dream. We offer a unique experience that will allow you to go on a space journey and see all the secrets of the universe. We guarantee that every moment in space will be filled with incredible impressions, excitement and new discoveries. Our team of professionals takes care of your safety and comfort so that you can fully enjoy your adventure in space. We offer various options for space excursions.</p>
+        {!isTextVisible && (
+          <button className="content__description-button" onClick={handleButtonClick}>Read more</button>
+        )}
+        <p className={`content__description-additional ${isTextVisible ? 'visible' : ''}`}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
       </div>
+    </div>
       <footer className="footer">
         <img src={footerIcon} alt='Rocket'/>
         </footer>
