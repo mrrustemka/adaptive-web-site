@@ -27,8 +27,9 @@ function App() {
     <div className="app">
       <header className="app__banner">
         <div className="banner__header">
-          <img className="banner__logo" src={logo} alt="Logo" loading='lazy'/>
-          <nav className="banner__navigation">
+          {/* <img className="banner__logo" src={logo} alt="Logo" loading='lazy'/> */}
+          <div className="banner__logo"></div>
+          <nav className={`banner__navigation ${isMenuVisible ? 'banner__navigation--open' : ''}`}>
             <button className={`banner__menu ${isMenuVisible ? 'banner__menu--open' : ''}`} onClick={handleMenuClick}></button>
             <a className={`banner__nav-link banner__nav-link--home ${isMenuVisible ? 'banner__nav-link--visible' : ''}`} href="#">Home</a>
             <a className={`banner__nav-link banner__nav-link--products ${isMenuVisible ? 'banner__nav-link--visible' : ''}`} href="#">Products</a>
