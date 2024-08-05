@@ -27,7 +27,6 @@ function App() {
     <div className="app">
       <header className="app__banner">
         <div className="banner__header">
-          {/* <img className="banner__logo" src={logo} alt="Logo" loading='lazy'/> */}
           <div className="banner__logo"></div>
           <nav className={`banner__navigation ${isMenuVisible ? 'banner__navigation--open' : ''}`}>
             <button className={`banner__menu ${isMenuVisible ? 'banner__menu--open' : ''}`} onClick={handleMenuClick}></button>
@@ -55,7 +54,14 @@ function App() {
       <div className="app__content">
       <h3 className="content__title">Offers</h3>
       {cardData.map((card, index) => (
-        <Card key={index} header={card.header} text={card.text} className={card.className} />
+            <div key={index} className={card.className}>
+            <div>
+              <h2>{card.header}</h2>
+              <h4>{card.text}</h4>
+              <button>Learn more</button>
+            </div>
+          </div>
+        // <Card key={index} header={card.header} text={card.text} className={card.className} />
       ))}
       <div className="content__description">
         <h5 className="content__description-title">Embark on a space journey</h5>
