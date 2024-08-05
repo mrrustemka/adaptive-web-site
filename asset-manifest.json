@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/adaptive-web-site/static/css/main.c2234416.css",
-    "main.js": "/adaptive-web-site/static/js/main.450d1e15.js",
+    "main.css": "/adaptive-web-site/static/css/main.e8fe6e3d.css",
+    "main.js": "/adaptive-web-site/static/js/main.69b73cca.js",
     "static/media/COSMO_1.svg": "/adaptive-web-site/static/media/COSMO_1.f3d01d721c02defbcf52.svg",
     "static/media/EARTH_MOBILE.svg": "/adaptive-web-site/static/media/EARTH_MOBILE.2b913977e76d39ae90fd.svg",
     "static/media/EARTH_TABLET.svg": "/adaptive-web-site/static/media/EARTH_TABLET.7a238e3eaacdd584790a.svg",
@@ -16,14 +16,15 @@
     "static/media/COSMO_3_MOBILE.svg": "/adaptive-web-site/static/media/COSMO_3_MOBILE.c7b2237ce26d1d59b142.svg",
     "static/media/COSMO_4_MOBILE.svg": "/adaptive-web-site/static/media/COSMO_4_MOBILE.f9d3e47f47cb71bfa495.svg",
     "static/media/LOGO.svg": "/adaptive-web-site/static/media/LOGO.f4153131d3955bdfa609912a9f3b5caf.svg",
+    "static/media/LOGO_MOBILE.svg": "/adaptive-web-site/static/media/LOGO_MOBILE.eae66c79e627e2217c9e.svg",
     "static/media/MENU_MOBILE.svg": "/adaptive-web-site/static/media/MENU_MOBILE.6839994c70d8fa1e2451.svg",
     "static/media/MENU_MOBILE_CLOSE.svg": "/adaptive-web-site/static/media/MENU_MOBILE_CLOSE.60d4f41347544050a7b9.svg",
     "index.html": "/adaptive-web-site/index.html",
-    "main.c2234416.css.map": "/adaptive-web-site/static/css/main.c2234416.css.map",
-    "main.450d1e15.js.map": "/adaptive-web-site/static/js/main.450d1e15.js.map"
+    "main.e8fe6e3d.css.map": "/adaptive-web-site/static/css/main.e8fe6e3d.css.map",
+    "main.69b73cca.js.map": "/adaptive-web-site/static/js/main.69b73cca.js.map"
   },
   "entrypoints": [
-    "static/css/main.c2234416.css",
-    "static/js/main.450d1e15.js"
+    "static/css/main.e8fe6e3d.css",
+    "static/js/main.69b73cca.js"
   ]
 }
