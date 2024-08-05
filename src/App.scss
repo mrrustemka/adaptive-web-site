@@ -294,6 +294,26 @@ $grid-gap: 40px;
 }
 
 // Media Queries
+@media (max-width: 850px) {
+  .app__banner {
+    .banner__content {
+      width: 660px;
+    }
+  }
+  .app__content {
+    .card__item--1 {
+      h2 {
+        width: 600px;
+      }
+    }
+    .card__item--4 {
+      h2 {
+        width: 580px;
+      }
+    }
+  }
+}
+
 @media (max-width: 768px) {
   .app__banner {
     background-image: url('./images/EARTH_TABLET.svg'), url('./images/COSMO_1.svg');
@@ -427,6 +447,56 @@ $grid-gap: 40px;
   }
 }
 
+@media (max-width: 700px) {
+  .app__banner {
+    .banner__header {
+      gap: 0;
+      .banner__navigation {
+        gap: 16px;
+    }
+  }
+}
+  .app__content {
+    padding: 50px 20px;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, auto);
+
+    .card__item--1 {
+      padding: 102px 92px 32px 27px;
+      grid-row: 2 / 3;
+    }
+
+    .card__item--2 {
+      padding: 98px 28px 36px 25px;
+      grid-row: 3 / 4;
+      grid-column: 1 / 2;
+    }
+
+    .card__item--3 {
+      padding: 76px 26px 40px 28px;
+      grid-row: 4 / 5;
+    }
+
+    .card__item--4 {
+      padding: 90px 28px 43px 25px;
+      grid-row: 5 / 6;
+      grid-column: 1 / 2;
+    }
+
+    .content__description {
+      grid-row: 6 / 7;
+      grid-column: 1 / 2;    }
+  }
+}
+
+@media (max-width: 540px) {
+  .app__banner {
+    .banner__content {
+      width: 330px;
+    }
+  }
+}
+
 @media (max-width: 360px) {
   .app__banner {
     background-image: url('./images/EARTH_MOBILE.svg'), url('./images/COSMO_1.svg');
@@ -446,6 +516,9 @@ $grid-gap: 40px;
           width: 30px;
           height: 38px;
           background-image: url('./images/MENU_MOBILE.svg');
+          background-color: transparent;
+          border: none;
+          margin-left: 48px;
           
           &.banner__menu--open {
             background-image: url('./images/MENU_MOBILE_CLOSE.svg');
