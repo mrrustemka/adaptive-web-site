@@ -447,7 +447,7 @@ $grid-gap: 40px;
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 750px) {
   .app__banner {
     .banner__header {
       gap: 0;
@@ -519,7 +519,7 @@ $grid-gap: 40px;
           background-color: transparent;
           border: none;
           margin-left: 48px;
-          
+
           &.banner__menu--open {
             background-image: url('./images/MENU_MOBILE_CLOSE.svg');
             transition: fill 0.3s ease;

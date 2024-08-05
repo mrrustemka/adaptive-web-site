@@ -27,7 +27,7 @@ function App() {
     <div className="app">
       <header className="app__banner">
         <div className="banner__header">
-          <img className="banner__logo" src={logo} alt="Logo" />
+          <img className="banner__logo" src={logo} alt="Logo" loading='lazy'/>
           <nav className="banner__navigation">
             <button className={`banner__menu ${isMenuVisible ? 'banner__menu--open' : ''}`} onClick={handleMenuClick}></button>
             <a className={`banner__nav-link banner__nav-link--home ${isMenuVisible ? 'banner__nav-link--visible' : ''}`} href="#">Home</a>
@@ -66,7 +66,7 @@ function App() {
       </div>
     </div>
       <footer className="app__footer">
-        <img img className="footer__icon" src={footerIcon} alt='Rocket'/>
+        <img className="footer__icon" src={footerIcon} alt='Rocket' loading='lazy'/>
         </footer>
     </div>
   );
