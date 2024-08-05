@@ -40,8 +40,10 @@ $white: #FFFFFF;
         width: 24px;
         height: 24px;
       }
-      .header__basket-icon:hover {
-
+      &:hover .header__basket-icon {
+        .basket-icon-path {
+          fill: url(#basketGradient);
+        }
       }
     }
     a,
