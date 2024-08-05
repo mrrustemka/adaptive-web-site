@@ -8,11 +8,6 @@ $white: #FFFFFF;
   background-color: $blue;
 }
 
-.header__logo {
-  grid-column-start: 1;
-  grid-column-end: 2;
-}
-
 .banner {
   background-image: url('./images/EARTH.svg'), url('./images/COSMO_1.svg');
   background-position: right, left top;
@@ -26,43 +21,49 @@ $white: #FFFFFF;
     display: grid;
     grid-gap: 28px;
     grid-column: auto 1 auto auto auto;
-    grid-template-columns: auto 1fr auto auto auto;
+    grid-template-columns: auto 1fr auto;
     grid-template-rows: 1fr;
     padding: 24px 90px 24px 82px;
-    .header__home {
+    overflow: visible;
+      .header__logo {
+        grid-column-start: 1;
+        grid-column-end: 2;
+      }
+    .header__navigation {
       grid-column-start: 3;
       grid-column-end: 4;
-    }
-    .header__products {
-      grid-column-start: 4;
-      grid-column-end: 5;
-    }
-    .header__basket {
-      grid-column-start: 5;
-      grid-column-end: 6;
-      .header__basket-icon {
-        width: 24px;
-        height: 24px;
+      display: grid;
+      grid-template-columns: auto auto auto auto;
+      gap: 30px;
+      a, img {
+        display: inherit;
       }
-      &:hover .header__basket-icon {
-        .basket-icon-path {
-          fill: url(#basketGradient);
-        }
+      .header__navigation__menu {
+        visibility: hidden;
+        grid-column-start: 1;
+        grid-column-end: 2;
       }
-    }
-    a,
-    img {
-      display: inherit;
-    }
-    a {
-      text-decoration: none;
-      color: white;
-    }
-    a:hover {
+      a {
+        text-decoration: none;
+        color: white;
+      }
+      a:hover {
         background: linear-gradient(98.25deg, #EBFF00 18.56%, #FF70D9 76.02%);
         -webkit-text-fill-color: transparent; 
         -webkit-background-clip: text; 
         transition: fill 0.3s ease;
+      }
+      .header__navigation__basket {
+        .header__navigation__basket-icon {
+          width: 24px;
+          height: 24px;
+        }
+        &:hover .header__navigation__basket-icon {
+          .basket-icon-path {
+            fill: url(#basketGradient);
+          }
+        }
+      }
     }
   }
   .banner__header {
@@ -401,19 +402,68 @@ $white: #FFFFFF;
       height: 38px;
       grid-template-columns: auto 1fr auto;
       padding: 5px 20px 5px 20px;
+      .header__navigation {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr 1fr 1fr;
+        gap: 0;
+        .header__navigation__menu {
+          visibility: visible;
+          grid-row-start: 1;
+          grid-row-end: 2;
+          border: none;
+          background-color: transparent;
+          padding: 0;
+          width: auto;
+          margin: auto;
+          width: 30px;
+          height: 38px;
+          background-image: url('./images/MENU_MOBILE.svg');
+          &.open {
+            background-image: url('./images/MENU_MOBILE_CLOSE.svg');
+            transition: fill 0.3s ease;
+          }
+        }
+
+        .header__navigation__home {
+          grid-row-start: 2;
+          grid-row-end: 3;
+          opacity: 0;
+          padding: 8px;
+        }
+        .header__navigation__products {
+          grid-row-start: 3;
+          grid-row-end: 4;
+          opacity: 0;
+          padding: 8px;
+        }
+        .header__navigation__basket {
+          grid-row-start: 4;
+          grid-row-end: 5;
+          grid-column-start: 1;
+          grid-column-end: 2;
+          opacity: 0;
+          padding: 8px;
+        }
+        .header__navigation__home.visible,
+        .header__navigation__products.visible,
+        .header__navigation__basket.visible {
+          opacity: 1;
+          background-color: $black;
+        }
+      }
       .header__logo {
         margin-top: 7px;
       }
-      .header__home {
-        display: none; // temporary
-      }
-      .header__products {
-        display: none; // temporary
-      }
-      .header__basket {
+      // .header__navigation__home {
+      //   display: none; // temporary
+      // }
+      // .header__navigation__products {
+      //   display: none; // temporary
+      // }
+      .header__navigation__basket {
         grid-column-start: 3;
         grid-column-end: 4;
-        .header__basket-icon {
+        .header__navigation__basket-icon {
           width: 30px;
           height: 38px;
         }
