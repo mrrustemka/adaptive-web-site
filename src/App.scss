@@ -8,13 +8,13 @@ $white: #FFFFFF;
   background-color: $blue;
 }
 
-.banner {
+.app__banner {
   background-image: url('./images/EARTH.svg'), url('./images/COSMO_1.svg');
   background-position: right, left top;
   background-repeat: no-repeat, no-repeat;
   height: auto;
   background-size: auto, cover;
-  .header {
+  .banner__header {
     background-color: $black;
     color: $white;
     height: 32px;
@@ -25,11 +25,11 @@ $white: #FFFFFF;
     grid-template-rows: 1fr;
     padding: 24px 90px 24px 82px;
     overflow: visible;
-      .header__logo {
+      .banner__logo {
         grid-column-start: 1;
         grid-column-end: 2;
       }
-    .header__navigation {
+    .banner__navigation {
       grid-column-start: 3;
       grid-column-end: 4;
       display: grid;
@@ -38,7 +38,7 @@ $white: #FFFFFF;
       a, img {
         display: inherit;
       }
-      .header__navigation__menu {
+      .banner__menu {
         visibility: hidden;
         grid-column-start: 1;
         grid-column-end: 2;
@@ -53,26 +53,26 @@ $white: #FFFFFF;
         -webkit-background-clip: text; 
         transition: fill 0.3s ease;
       }
-      .header__navigation__basket {
-        .header__navigation__basket-icon {
+      .banner__nav-link, .banner__nav-link--basket {
+        .banner__basket-icon {
           width: 24px;
           height: 24px;
         }
-        &:hover .header__navigation__basket-icon {
-          .basket-icon-path {
+        &:hover .banner__basket-icon {
+          .banner__basket-icon-path {
             fill: url(#basketGradient);
           }
         }
       }
     }
   }
-  .banner__header {
+  .banner__content {
     width: 740px;
     color: $white;
     text-align: left;
     font-family: "Lato", sans-serif;
     padding: 91px 0px 119px 82px;
-    h1 {
+    .banner__title {
       margin: 0;
       font-size: 72px;
       font-weight: 800;
@@ -81,7 +81,7 @@ $white: #FFFFFF;
         color: $pink;
       }
     }
-    h3 {
+    .banner__subtitle {
       font-size: 32px;
       font-weight: 800;
       line-height: 38.4px;
@@ -108,7 +108,7 @@ $white: #FFFFFF;
   }
 }
 
-.content {
+.app__content {
   background-color: transparent;
   padding: 58px 80px;
   display: grid;
@@ -231,7 +231,7 @@ $white: #FFFFFF;
       color: $white;
       margin: 0;
     }
-    .content__description-text {
+    .content__description-text, content__description-additional {
       font-size: 20px;
       font-weight: 500;
       line-height: 24px;
@@ -257,7 +257,7 @@ $white: #FFFFFF;
       transition: opacity 0.5s ease-in-out;
     }
     
-    .content__description-additional.visible {
+    .content__description-additional.content__description-additional--visible {
       display: block;
       font-size: 20px;
       font-weight: 500;
@@ -269,37 +269,37 @@ $white: #FFFFFF;
   }
 }
 
-.footer {
+.app__footer {
     text-align: center;
     padding-bottom: 19px;
     background-color: $black;
 }
 
 @media (width <= 768px) {
-  .header__logo {
+  .banner__logo {
     width: 72px;
   }
-  .banner {
+  .app__banner {
     background-image: url('./images/EARTH_TABLET.svg'), url('./images/COSMO_1.svg');
     background-position: right bottom, left top;
-    .header {
+    .banner__header {
       grid-gap: 30px;
       padding: 28px 50px 28px 30px;
     }
-    .banner__header {
-      width: 411px;
+    .banner__content {
+      width: 494px;
       padding: 100px 0px 100px 30px;
-      h1 {
+      .banner__title {
         font-size: 48px;
         line-height: 48px;
       }
-      h3 {
+      .banner__subtitle {
         font-size: 22px;
         line-height: 26.4px;
       }
     }
   }
-  .content {
+  .app__content {
     padding: 55px 30px;
     grid-gap: 30px;
     grid-template-columns: 1fr 1fr;
@@ -390,23 +390,28 @@ $white: #FFFFFF;
         font-size: 16px;
         line-height: 19.2px;
       }
+      .content__description-additional.content__description-additional--visible {
+        font-size: 16px;
+        line-height: 19.2px;
+        margin: 13px 0 20px;
+      }
     }
   }
 }
 
 @media (width <= 360px) {
-  .banner {
+  .app__banner {
     background-image: url('./images/EARTH_MOBILE.svg'), url('./images/COSMO_1.svg');
     background-position: center top, left top;
-    .header {
+    .banner__header {
       height: 38px;
       grid-template-columns: auto 1fr auto;
       padding: 5px 20px 5px 20px;
-      .header__navigation {
+      .banner__navigation {
         grid-template-columns: 1fr;
         grid-template-rows: auto 1fr 1fr 1fr;
         gap: 0;
-        .header__navigation__menu {
+        .banner__menu {
           visibility: visible;
           grid-row-start: 1;
           grid-row-end: 2;
@@ -418,25 +423,29 @@ $white: #FFFFFF;
           width: 30px;
           height: 38px;
           background-image: url('./images/MENU_MOBILE.svg');
-          &.open {
+          &.banner__menu--open {
             background-image: url('./images/MENU_MOBILE_CLOSE.svg');
             transition: fill 0.3s ease;
           }
         }
 
-        .header__navigation__home {
+        .banner__nav-link--home {
           grid-row-start: 2;
           grid-row-end: 3;
+          grid-column-start: 1;
+          grid-column-end: 2;
           opacity: 0;
           padding: 8px;
         }
-        .header__navigation__products {
+        .banner__nav-link--products {
           grid-row-start: 3;
           grid-row-end: 4;
+          grid-column-start: 1;
+          grid-column-end: 2;
           opacity: 0;
           padding: 8px;
         }
-        .header__navigation__basket {
+        .banner__nav-link--basket {
           grid-row-start: 4;
           grid-row-end: 5;
           grid-column-start: 1;
@@ -444,40 +453,34 @@ $white: #FFFFFF;
           opacity: 0;
           padding: 8px;
         }
-        .header__navigation__home.visible,
-        .header__navigation__products.visible,
-        .header__navigation__basket.visible {
+        .banner__nav-link--visible {
           opacity: 1;
           background-color: $black;
         }
       }
-      .header__logo {
+      .banner__logo {
         margin-top: 7px;
       }
-      // .header__navigation__home {
-      //   display: none; // temporary
-      // }
-      // .header__navigation__products {
-      //   display: none; // temporary
-      // }
-      .header__navigation__basket {
+      .banner__nav-link, .banner__nav-link--basket {
         grid-column-start: 3;
         grid-column-end: 4;
-        .header__navigation__basket-icon {
+        .banner__basket-icon {
           width: 30px;
           height: 38px;
         }
       }
     }
-    .banner__header {
-      width: 292px;
-      padding: 250px 0px 42px 34px;
+    .banner__content {
+      width: 322px;
       text-align: center;
-      h1 {
+      padding: 250px 0 42px;
+      margin: auto;
+      .banner__title {
         font-size: 36px;
         line-height: 36px;
+        font-weight: 700;
       }
-      h3 {
+      .banner__subtitle {
         font-size: 16px;
         line-height: 19.2px;
       }
@@ -492,7 +495,7 @@ $white: #FFFFFF;
     }
   }
 
-  .content {
+  .app__content {
     padding: 50px 20px;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto auto auto auto;
@@ -506,7 +509,7 @@ $white: #FFFFFF;
       grid-row-start: 2;
       grid-row-end: 3;
       h2 {
-        width: 200px;
+        width: 196px;
       }
     }
     .card__item--2 {
@@ -560,6 +563,11 @@ $white: #FFFFFF;
       .content__description-button {
         font-size: 14px;
         line-height: 16.8px;
+      }
+      .content__description-additional.content__description-additional--visible {
+        font-size: 14px;
+        line-height: 16.8px;
+        margin: 20px 0;
       }
     }
   }
