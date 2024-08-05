@@ -1,11 +1,11 @@
 {
   "files": {
-    "main.css": "/adaptive-web-site/static/css/main.9efd03b1.css",
-    "main.js": "/adaptive-web-site/static/js/main.917dae36.js",
+    "main.css": "/adaptive-web-site/static/css/main.c2234416.css",
+    "main.js": "/adaptive-web-site/static/js/main.450d1e15.js",
     "static/media/COSMO_1.svg": "/adaptive-web-site/static/media/COSMO_1.f3d01d721c02defbcf52.svg",
     "static/media/EARTH_MOBILE.svg": "/adaptive-web-site/static/media/EARTH_MOBILE.2b913977e76d39ae90fd.svg",
-    "static/media/EARTH.svg": "/adaptive-web-site/static/media/EARTH.4dcf37c8c10c5f0494ad.svg",
     "static/media/EARTH_TABLET.svg": "/adaptive-web-site/static/media/EARTH_TABLET.7a238e3eaacdd584790a.svg",
+    "static/media/EARTH.svg": "/adaptive-web-site/static/media/EARTH.83d68f94de9d84f4e1bc.svg",
     "static/media/COSMO_5.svg": "/adaptive-web-site/static/media/COSMO_5.2a68de58612e9e61adbb.svg",
     "static/media/FOOTER_ICON.svg": "/adaptive-web-site/static/media/FOOTER_ICON.e1225dc8c2fe366824a3231b2e88d880.svg",
     "static/media/COSMO_2.svg": "/adaptive-web-site/static/media/COSMO_2.dbe0588ef6f69e1c9c7a.svg",
@@ -16,14 +16,14 @@
     "static/media/COSMO_3_MOBILE.svg": "/adaptive-web-site/static/media/COSMO_3_MOBILE.c7b2237ce26d1d59b142.svg",
     "static/media/COSMO_4_MOBILE.svg": "/adaptive-web-site/static/media/COSMO_4_MOBILE.f9d3e47f47cb71bfa495.svg",
     "static/media/LOGO.svg": "/adaptive-web-site/static/media/LOGO.f4153131d3955bdfa609912a9f3b5caf.svg",
-    "static/media/BASKET.svg": "/adaptive-web-site/static/media/BASKET.aa5b44fe878d55747850436a0daf7a32.svg",
-    "static/media/MENU.svg": "/adaptive-web-site/static/media/MENU.6839994c70d8fa1e2451eb481ca217d5.svg",
+    "static/media/MENU_MOBILE.svg": "/adaptive-web-site/static/media/MENU_MOBILE.6839994c70d8fa1e2451.svg",
+    "static/media/MENU_MOBILE_CLOSE.svg": "/adaptive-web-site/static/media/MENU_MOBILE_CLOSE.60d4f41347544050a7b9.svg",
     "index.html": "/adaptive-web-site/index.html",
-    "main.9efd03b1.css.map": "/adaptive-web-site/static/css/main.9efd03b1.css.map",
-    "main.917dae36.js.map": "/adaptive-web-site/static/js/main.917dae36.js.map"
+    "main.c2234416.css.map": "/adaptive-web-site/static/css/main.c2234416.css.map",
+    "main.450d1e15.js.map": "/adaptive-web-site/static/js/main.450d1e15.js.map"
   },
   "entrypoints": [
-    "static/css/main.9efd03b1.css",
-    "static/js/main.917dae36.js"
+    "static/css/main.c2234416.css",
+    "static/js/main.450d1e15.js"
   ]
 }
