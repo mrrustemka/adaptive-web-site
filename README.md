@@ -1,0 +1,1 @@
+https://mrrustemka.github.io/adaptive-web-site/
